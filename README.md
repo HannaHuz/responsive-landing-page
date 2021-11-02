@@ -1,7 +1,8 @@
 # UpBox-landing
 Responsive-landing-page using HTML,Sass,BEM.
+###### Demo: 
 ```
-Demo: https://hannahuz.github.io/responsive-landing-page/app/index.html
+https://hannahuz.github.io/responsive-landing-page/app/index.html
 ```
 ## Dependencies
 Use the package manager [npm](https://www.npmjs.com/) to install all dependencies.
