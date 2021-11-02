@@ -1,0 +1,151 @@
+.nav {
+  align-self: center;
+
+  &__toggle {
+    display: none;
+  }
+
+  &__btn {
+    position: absolute;
+    z-index: 2000;
+    cursor: pointer;
+    top: 45px;
+    right: 10px;
+
+    @include respond-to(tablet-portrait) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    @include respond-to(phone-only) {
+      background: $color-zircon;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 1500;
+      opacity: 0;
+      width: 0;
+      transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+  }
+
+  &__menu-list {
+    padding: 100px 0;
+    text-align: center;
+    width: 100%;
+
+    @include respond-to(tablet-portrait) {
+      display: flex;
+      padding: 10px;
+    }
+  }
+
+  &__menu-item {
+    margin: 25px;
+
+    @include respond-to(tablet-portrait) {
+      margin: 0;
+    }
+
+    @include respond-to(desktop) {
+      margin: 0 15px;
+    }
+  }
+
+  &__menu-link {
+    &_modified {
+      border-radius: 300px;
+      border: 1px solid $color-black;
+      background-color: transparent;
+
+      @include respond-to(phone-only) {
+        border: none;
+      }
+    }
+
+    &:link,
+    &:visited {
+      transition: color 0.3s ease;
+      font-size: 20px;
+      font-style: normal;
+      line-height: 15px;
+      letter-spacing: 0.16em;
+      padding: 5px 10px;
+      color: $color-black;
+      text-transform: uppercase;
+
+      @include respond-to(tablet-portrait) {
+        font-size: 10px;
+        line-height: 13px;
+        letter-spacing: 0.16em;
+      }
+
+      @include respond-to(desktop) {
+        font-size: 15px;
+        line-height: 18px;
+      }
+    }
+
+    &:hover,
+    &:active {
+      color: $color-pink;
+      transform: scaleX(1.3);
+    }
+  }
+
+  &__toggle:checked ~ &__menu {
+    opacity: 1;
+    width: 100%;
+  }
+
+  &__icon {
+    &,
+    &::before,
+    &::after {
+      width: 40px;
+      height: 4px;
+      background-color: $color-black;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s;
+    }
+
+    &::before {
+      top: -15px;
+    }
+
+    &::after {
+      top: 15px;
+    }
+  }
+
+  &__btn:hover &__icon::before {
+    top: -10px;
+  }
+
+  &__btn:hover &__icon::after {
+    top: 10px;
+  }
+
+  &__toggle:checked + &__btn &__icon {
+    background-color: transparent;
+  }
+
+  &__toggle:checked + &__btn &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__toggle:checked + &__btn &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}

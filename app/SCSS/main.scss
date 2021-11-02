@@ -2,5 +2,16 @@
 @import "utility/mixins";
 @import "fonts";
 
+@import "base/base";
+@import "base/layout";
+@import "base/buttons";
+@import "base/logo";
+@import "modules/top-bar";
 @import "modules/header";
+@import "modules/banner";
+@import "modules/plan";
+@import "modules/instruction";
+@import "modules/social";
+@import "base/nav";
 @import "modules/footer";
+

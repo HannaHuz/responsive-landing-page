@@ -1,0 +1,145 @@
+.plan {
+  padding: 91px 0 45px 0;
+
+  @include respond-to(tablet-portrait) {
+    padding: 27px 0;
+  }
+
+  @include respond-to(desktop) {
+    padding: 71px 0;
+  }
+
+  &__wrapper {
+    max-width: calc(100% - 30px);
+
+    @include respond-to(tablet-portrait) {
+      max-width: calc(100% - 47px);
+    }
+
+    @include respond-to(desktop) {
+      max-width: calc(100% - 85px);
+    }
+
+    @include respond-to(big-desktop) {
+      max-width: calc(100% - 20%);
+    }
+  }
+
+  &__underline {
+    margin-bottom: 65px;
+  }
+
+  &__content p {
+    font-size: 30px;
+    font-style: normal;
+    line-height: 40px;
+    letter-spacing: 0.12em;
+    text-align: center;
+
+    @include respond-to(tablet-portrait) {
+      font-size: 24px;
+      line-height: 31px;
+    }
+
+    @include respond-to(desktop) {
+      font-size: 44px;
+      line-height: 57px;
+    }
+  }
+
+  &__subtitle {
+    font-family: $font-regular;
+    font-size: 30px;
+    font-style: normal;
+    margin: 14px;
+    line-height: 41px;
+    text-align: center;
+
+    @include respond-to(tablet-portrait) {
+      font-size: 20px;
+      line-height: 27px;
+    }
+
+    @include respond-to(desktop) {
+      font-size: 36px;
+      line-height: 49px;
+    }
+  }
+
+  &__underline {
+    margin-bottom: 46px;
+  }
+
+  &__content {
+
+    @include respond-to(tablet-portrait) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__content_left {
+    background-image: url("../assets/images/blue-pricing-bg.png");
+  }
+
+  &__content_right {
+    background-image: url("../assets/images/pink-pricing-bg.png");
+  }
+
+  &__content_left, &__content_right {
+    border: 4px solid $color-silver;
+    border-radius: 6px;
+    padding: 27px 0 34px 0;
+    margin-bottom: 19px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include respond-to(tablet-portrait) {
+      flex-basis: 45%;
+      max-width: 45%;
+      padding: 24px 0 33px 0;
+      margin-bottom: 22px;
+    }
+
+    @include respond-to(desktop) {
+      flex-basis: 45%;
+      max-width: 45%;
+      padding: 50px 0 53px 0;
+      margin-bottom: 42px;
+    }
+  }
+
+  &__button {
+    height: 40px;
+    max-width: 179px;
+    width: 100%;
+    border-radius: 50px;
+    font-size: 14px;
+    font-style: normal;
+    margin: 8px 0;
+    letter-spacing: 0.12em;
+
+    @include respond-to(tablet-portrait) {
+      height: 32px;
+      width: 106px;
+      font-size: 8px;
+      line-height: 10px;
+      margin: 6px 0;
+    }
+
+    @include respond-to(desktop) {
+      height: 61px;
+      width: 200px;
+      font-size: 16px;
+      line-height: 21px;
+      margin: 20px 0;
+    }
+  }
+
+  &__description {
+
+    @include respond-to(tablet-portrait) {
+      text-align: center;
+    }
+  }
+}
