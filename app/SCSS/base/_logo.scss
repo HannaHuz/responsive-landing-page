@@ -1,0 +1,16 @@
+.logo {
+  align-self: center;
+  max-width: 56px;
+  height: 56px;
+  width: 100%;
+
+  @include respond-to(tablet-portrait) {
+    max-width: 129px;
+    width: 100%;
+  }
+
+  @include respond-to(desktop) {
+    max-width: 221px;
+    width: 100%;
+  }
+}

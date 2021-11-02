@@ -1,0 +1,198 @@
+.footer {
+  padding: 20px 0;
+
+  @include respond-to(tablet-portrait) {
+    padding: 41px 0;
+  }
+
+  @include respond-to(desktop) {
+    padding: 30px 0;
+  }
+
+  &__wrapper {
+    max-width: calc(100% - 13px);
+    margin: 0 auto;
+    padding: 41px 34px;
+    background-color: $color-beige;
+    border: 2px solid $color-silver;
+    border-radius: 6px;
+
+    @include respond-to(tablet-portrait) {
+      max-width: calc(100% - 40px);
+      padding: 54px 62px 21px;
+    }
+
+    @include respond-to(desktop) {
+      max-width: calc(100% - 27px);
+      padding: 44px 80px 17px;
+    }
+  }
+
+  &__logo {
+    max-width: 133px;
+    width: 100%;
+  }
+
+  &__socials {
+    visibility: hidden;
+
+    &-link {
+      padding: 0 10px;
+    }
+
+    &-img {
+      filter: grayscale(100%);
+      transition: all .2s;
+      object-fit: contain;
+      height: 25px;
+      display: inline;
+
+      &:hover {
+        transform: scale(1.2);
+        filter: none;
+      }
+    }
+
+    @include respond-to(tablet-portrait) {
+      visibility: visible;
+    }
+  }
+
+  &__container {
+    @include respond-to(tablet-portrait) {
+      margin-bottom: 51px;
+    }
+
+    @include respond-to(tablet-landscape) {
+      margin-bottom: 51px;
+    }
+
+    @include respond-to(desktop) {
+      margin-bottom: 61px;
+    }
+  }
+
+  &__nav-col {
+    @include respond-to(tablet-portrait) {
+      width: calc(100% / 2);
+    }
+
+    @include respond-to(tablet-landscape) {
+      width: calc(100% / 2);
+    }
+
+    @include respond-to(desktop) {
+      width: calc(100% / 4);
+    }
+  }
+
+  &__nav-content {
+    margin-bottom: 41px;
+    padding: 0 10px;
+  }
+
+  &__nav-link {
+    color: $color-black;
+    font-size: 13px;
+    line-height: 16px;
+    margin-bottom: 6px;
+    letter-spacing: 0.12em;
+
+    &:hover {
+      color: $color-silver;
+    }
+
+    @include respond-to(tablet-portrait) {
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__nav-item {
+    padding: 5px 0;
+  }
+
+  &__nav-title {
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.12em;
+    margin-bottom: 10px;
+
+    @include respond-to(tablet-portrait) {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 13px;
+    }
+
+    @include respond-to(desktop) {
+      font-size: 20px;
+      line-height: 27px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__copyrights {
+    border-top: 2px solid $color-silver;
+    max-width: 145%;
+    margin: 0 -34px;
+
+    @include respond-to(tablet-portrait) {
+      margin: 0 -62px;
+    }
+
+    @include respond-to(desktop) {
+      margin: 0 -80px;
+    }
+
+    &-content {
+      padding: 0 34px;
+
+      @include respond-to(tablet-portrait) {
+        padding: 0 62px;
+      }
+
+      @include respond-to(desktop) {
+        padding: 0 62px;
+      }
+    }
+
+    &-items {
+      display: flex;
+      flex-direction: column;
+
+      @include respond-to(tablet-portrait) {
+        flex-direction: row;
+      }
+
+      @include respond-to(desktop) {
+        justify-content: flex-end;
+        margin-top: 10px;
+      }
+    }
+
+    &-link {
+      color: $color-black;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.12em;
+      padding: 6px 10px;
+    }
+
+    &-text {
+      font-size: 11px;
+      line-height: 14px;
+      letter-spacing: 0.12em;
+      padding: 9px 10px;
+
+      @include respond-to(tablet-portrait) {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      @include respond-to(desktop) {
+        display: none;
+      }
+    }
+  }
+}

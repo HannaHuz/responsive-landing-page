@@ -1,0 +1,18 @@
+.header {
+  padding: 18px 0;
+  position: relative;
+
+  @include respond-to(tablet-portrait) {
+    padding: 20px 0;
+  }
+
+  &__wrapper {
+    @include respond-to(tablet-portrait) {
+      max-width: calc(100% - 40px);
+    }
+
+    @include respond-to(desktop) {
+      max-width: calc(100% - 111px);
+    }
+  }
+}
